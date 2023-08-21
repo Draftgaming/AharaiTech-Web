@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 404 - Server is Closed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box-form {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: block;
+            color: #555;
+            margin-bottom: 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #007BFF;
+        }
+
+        i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box-form">
+        <div class="left">
+            <h1>Error 404: השרת לא פעיל!!</h1>
+            <p>האפליקציה הרשמית של חניכי אחרייטק!</p>
+            <a href="https://www.facebook.com/login/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+            <a href="https://accounts.google.com/"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+        </div>
+    </div>
+
+    <!-- If you haven't already, you'll need to include the FontAwesome library to make sure the icons display -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

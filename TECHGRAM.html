@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://127.0.0.1:5500/login-page-in-html-with-css-code/homepagae.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHGRAM</title>
+    <link href="./TECHGRAM_files/css" rel="stylesheet">
+    <link href="./TECHGRAM_files/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-repeat: repeat-x;
+            background-size: cover;
+            font-family: "Open Sans", sans-serif;
+            background-color: #e6e6e6;
+            color: #2c3e50;
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db;
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #FFFFFF;
+        }
+
+        .header a {
+            color: #FFFFFF;
+            margin-left: 15px;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .header a:hover {
+            background-color: rgb(190, 38, 38);
+            color: #3498db;
+        }
+
+        .account-panel {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 50px;
+            background-color: #fff;
+            color: #2c3e50;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .account-panel h2 {
+            margin: 0;
+        }
+
+        .account-panel p {
+            margin: 10px 0;
+        }
+
+        .account-panel button {
+            margin-top: 20px;
+            color: #FFFFFF;
+            background-color: #3498db;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .account-panel button:hover {
+            background-color: #2980b9;
+        }
+
+        #profile-icon {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: left;
+            margin-top: 20px;
+        }
+
+        .profile-section, .feed-section {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .profile-section {
+            flex: 1;
+        }
+
+        .feed-section {
+            flex: 3;
+            margin-left: 20px;
+        }
+
+        .feed-section button {
+            display: block;
+            margin: 0 auto 20px;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .feed-section button:hover {
+            background-color: #2980b9;
+        }
+
+        .post {
+            background-color: #f2f2f2;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>TECHGRAM - The Tech Social Network</h1>
+        <i id="profile-icon" class="fa fa-user-circle" aria-hidden="true" style="font-size: 30px;"></i>
+        <a href="http://127.0.0.1:5500/login-page-in-html-with-css-code/info.html">מידע על התוכנית</a>
+    </div>
+    <div class="main-content">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="account-panel">
+                <h2>Welcome, <span id="usernameDisplay"></span></h2>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Password:</strong> <span id="password"></span></p>
+                <p><strong>Birthdate:</strong> <span id="birthdate"></span></p>
+                <p><strong>ID:</strong> <span id="id"></span></p>
+                <p><strong>City:</strong> <span id="city"></span></p>
+                <button onclick="editDetails()">Edit Details</button>
+            </div>
+        </div>
+
+            </div>
+        
+
+        <!-- Feed Section -->
+
+
+        <div class="feed-section">
+            <input type="text" id="searchBar" placeholder="חפש משתמש...">
+            <button onclick="searchPosts()">חפש</button>
+            <textarea id="postContent" rows="4" cols="50" placeholder="Enter your post content here..."></textarea>
+            <input type="file" id="postImage" accept="image/*">
+            <button onclick="uploadPost()">העלה פוסט</button>
+            <div class="post">
+                <h3>גיא מזרחי</h3>
+                <p>פחות אהבתי את העיצוב אבל נחמד בתור התחלה</p>
+            </div>
+            <div class="post">
+                <h3> מנהל</h3>
+                <img src="./TECHGRAM_files/s.pnj.jfif" alt="Description of Image">
+                <p>העלת תמונה? בוודאי!</p>
+            </div>
+            
+            <div class="post">
+                <h3>אולגה - מנהלת התוכנית</h3>
+                <p> וואוו זה מהמם בתור התחלה!</p>
+            </div>
+            <div class="post">
+                <h3>ADMIN1-SHAY</h3>
+                <p> עיצוב סביר.. העלת פוסט באמת עובדת? </p>
+            </div>
+        <div class="post"><h3>Anonymous</h3><p>SCS</p></div><div class="post"><h3>Anonymous</h3><p>SCS</p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MiIgaGVpZ2h0PSI3MiIgdmlld0JveD0iMCAwIDcyIDcyIiBmaWxsPSJub25lIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNOC4yMzU5MSAyNi44MzUxQzE4LjY2MTkgMjYuODM1MSAyNy4xMTM4IDE4LjM1MjggMjcuMTEzOCA3Ljg4OTM3QzI3LjExMzggNi4zOTU0OCAyNi45NDE1IDQuOTQxOTggMjYuNjE1OCAzLjU0Nzc4QzI2LjIyMTQgMS44NTk0MyAyNy43Mjc4IDAuMTY3MjM4IDI5LjI2MTggMC45NzUzMTlDMzUuOTAzMyA0LjQ3MzkzIDQwLjQzMzUgMTEuNDYyMSA0MC40MzM1IDE5LjUxMjJDNDAuNDMzNSAzMS4wNjcgMzEuMSA0MC40MzQgMTkuNTg2NSA0MC40MzRDMTEuNDEzOSA0MC40MzQgNC4zMzk2MSAzNS43MTQzIDAuOTIyMzIyIDI4Ljg0MjVDMC4xNDk4MzggMjcuMjg5MiAxLjg3ODM5IDI1LjgxOTIgMy41NTkxMiAyNi4yNDkyQzUuMDU0NyAyNi42MzE3IDYuNjIxNjQgMjYuODM1MSA4LjIzNTkxIDI2LjgzNTFaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfNTlfMjcwNjYpIiAvPg0KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy41IDY5SDM0LjVIMzZINTUuNUM2NC42MTI3IDY5IDcyIDYxLjYxMjcgNzIgNTIuNUM3MiA0My4zODczIDY0LjYxMjcgMzYgNTUuNSAzNkM1NS4xMzgyIDM2IDU0Ljc3OTEgMzYuMDExNiA1NC40MjMxIDM2LjAzNDZDNTAuNjU2NiAyOC44NzkgNDMuMTQ4MSAyNCAzNC41IDI0QzIzLjYwMDMgMjQgMTQuNTEwNyAzMS43NTA0IDEyLjQ0MTggNDIuMDQwOUM1LjQ4MDU3IDQyLjU4MDYgMCA0OC40MDAzIDAgNTUuNUMwIDYyLjk1NTggNi4wNDQxNiA2OSAxMy41IDY5WiIgZmlsbD0iI0U3RjFGRiIgLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTMuNSA2OUgzNC41SDM2SDU1LjVDNjQuNjEyNyA2OSA3MiA2MS42MTI3IDcyIDUyLjVDNzIgNDMuMzg3MyA2NC42MTI3IDM2IDU1LjUgMzZDNTUuMTM4MiAzNiA1NC43NzkxIDM2LjAxMTYgNTQuNDIzMSAzNi4wMzQ2QzUwLjY1NjYgMjguODc5IDQzLjE0ODEgMjQgMzQuNSAyNEMyMy42MDAzIDI0IDE0LjUxMDcgMzEuNzUwNCAxMi40NDE4IDQyLjA0MDlDNS40ODA1NyA0Mi41ODA2IDAgNDguNDAwMyAwIDU1LjVDMCA2Mi45NTU4IDYuMDQ0MTYgNjkgMTMuNSA2OVoiIGZpbGw9InVybCgjcGFpbnQxX2xpbmVhcl81OV8yNzA2NikiIC8+DQo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTEzLjUgNjlIMzQuNUgzNkg1NS41QzY0LjYxMjcgNjkgNzIgNjEuNjEyNyA3MiA1Mi41QzcyIDQzLjM4NzMgNjQuNjEyNyAzNiA1NS41IDM2QzU1LjEzODIgMzYgNTQuNzc5MSAzNi4wMTE2IDU0LjQyMzEgMzYuMDM0NkM1MC42NTY2IDI4Ljg3OSA0My4xNDgxIDI0IDM0LjUgMjRDMjMuNjAwMyAyNCAxNC41MTA3IDMxLjc1MDQgMTIuNDQxOCA0Mi4wNDA5QzUuNDgwNTcgNDIuNTgwNiAwIDQ4LjQwMDMgMCA1NS41QzAgNjIuOTU1OCA2LjA0NDE2IDY5IDEzLjUgNjlaIiBmaWxsPSJ1cmwoI3BhaW50Ml9saW5lYXJfNTlfMjcwNjYpIiAvPg0KPHBhdGggZD0iTTAgNTUuNUMwIDQ4LjA0NDIgNi4wNDQxNiA0MiAxMy41IDQySDE4QzI3Ljk0MTEgNDIgMzYgNTAuMDU4OSAzNiA2MFY2OUgxMy41QzYuMDQ0MTYgNjkgMCA2Mi45NTU4IDAgNTUuNVoiIGZpbGw9InVybCgjcGFpbnQzX3JhZGlhbF81OV8yNzA2NikiIC8+DQo8cGF0aCBkPSJNMTIgNDYuNUMxMiAzNC4wNzM2IDIyLjA3MzYgMjQgMzQuNSAyNEM0Ni45MjY0IDI0IDU3IDM0LjA3MzYgNTcgNDYuNUM1NyA1OC45MjY0IDQ2LjkyNjQgNjkgMzQuNSA2OUMyMi4wNzM2IDY5IDEyIDU4LjkyNjQgMTIgNDYuNVoiIGZpbGw9InVybCgjcGFpbnQ0X3JhZGlhbF81OV8yNzA2NikiIC8+DQo8Y2lyY2xlIGN4PSI1NS41IiBjeT0iNTIuNSIgcj0iMTYuNSIgZmlsbD0idXJsKCNwYWludDVfcmFkaWFsXzU5XzI3MDY2KSIgLz4NCjxkZWZzPg0KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzU5XzI3MDY2IiB4MT0iMzcuMzUxOCIgeTE9IjM4Ljc2NDQiIHgyPSIzOS4wMjkzIiB5Mj0iLTAuNjE2OTUxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdG9wLWNvbG9yPSIjRUU3RjE4IiAvPg0KPHN0b3Agb2Zmc2V0PSIwLjU2Mjk4IiBzdG9wLWNvbG9yPSIjRUVCODJFIiAvPg0KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkVCNjQ5IiBzdG9wLW9wYWNpdHk9IjAuNzgiIC8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDFfbGluZWFyXzU5XzI3MDY2IiB4MT0iMjIuNSIgeTE9IjM0LjUiIHgyPSIzNiIgeTI9IjY5IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdG9wLWNvbG9yPSIjQzZEOEY1IiAvPg0KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjODlBRkQxIiBzdG9wLW9wYWNpdHk9IjAiIC8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDJfbGluZWFyXzU5XzI3MDY2IiB4MT0iMzIuMDk5OCIgeTE9IjcwLjU5MjUiIHgyPSIzMS4xNTM4IiB5Mj0iMjQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IiM1NDdEREEiIC8+DQo8c3RvcCBvZmZzZXQ9IjAuMjU3NDIyIiBzdG9wLWNvbG9yPSIjOTNDMkZGIiBzdG9wLW9wYWNpdHk9IjAiIC8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPHJhZGlhbEdyYWRpZW50IGlkPSJwYWludDNfcmFkaWFsXzU5XzI3MDY2IiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKDE5LjUgNjkpIHJvdGF0ZSgtMTI3Ljg3NSkgc2NhbGUoMjguNTA0NCAzMi45ODcxKSI+DQo8c3RvcCBvZmZzZXQ9IjAuNjgzNzg0IiBzdG9wLWNvbG9yPSIjOEZBQkREIiBzdG9wLW9wYWNpdHk9IjAiIC8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1NTgyRDMiIC8+DQo8L3JhZGlhbEdyYWRpZW50Pg0KPHJhZGlhbEdyYWRpZW50IGlkPSJwYWludDRfcmFkaWFsXzU5XzI3MDY2IiBjeD0iMCIgY3k9IjAiIHI9IjEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBncmFkaWVudFRyYW5zZm9ybT0idHJhbnNsYXRlKDM0LjUgNjQuNSkgcm90YXRlKC05MCkgc2NhbGUoNDAuNSkiPg0KPHN0b3Agb2Zmc2V0PSIwLjU5ODc2NSIgc3RvcC1jb2xvcj0iI0M3REZGRiIgc3RvcC1vcGFjaXR5PSIwIiAvPg0KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNkI5N0U2IiAvPg0KPC9yYWRpYWxHcmFkaWVudD4NCjxyYWRpYWxHcmFkaWVudCBpZD0icGFpbnQ1X3JhZGlhbF81OV8yNzA2NiIgY3g9IjAiIGN5PSIwIiByPSIxIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgZ3JhZGllbnRUcmFuc2Zvcm09InRyYW5zbGF0ZSg0Ni43IDY0LjYpIHJvdGF0ZSgtNTYuMzA5OSkgc2NhbGUoMzEuNzI4OCkiPg0KPHN0b3Agb2Zmc2V0PSIwLjQ3NzcxIiBzdG9wLWNvbG9yPSIjOEZBQkREIiBzdG9wLW9wYWNpdHk9IjAiIC8+DQo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM1NTgyRDMiIC8+DQo8L3JhZGlhbEdyYWRpZW50Pg0KPC9kZWZzPg0KPHJlY3QgeD0iMzYiIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgcng9IjE4IiBmaWxsPSIjQzQyQjFDIiAvPjxwYXRoIGQ9Ik01NS45OTA3IDI4SDUzLjY0NFYxMS45ODE5QzUzLjMwMTMgMTIuMjcyIDUyLjcyNTYgMTIuNjEwNCA1MS45MTcgMTIuOTk3MUM1MS4xMDg0IDEzLjM3NSA1MC4zNzg5IDEzLjY0NzUgNDkuNzI4NSAxMy44MTQ1TDQ5LjA2OTMgMTEuNzg0MkM1MC4wOTc3IDExLjUxMTcgNTEuMTc4NyAxMS4wODExIDUyLjMxMjUgMTAuNDkyMkM1My40NDYzIDkuODk0NTMgNTQuMzQyOCA5LjI4ODA5IDU1LjAwMiA4LjY3Mjg1SDU1Ljk5MDdWMjhaIiBmaWxsPSJ3aGl0ZSIgLz48L3N2Zz4=" alt="Uploaded Image" width="100"></div></div>
+    
+
+    <script>
+function uploadPost() {
+    var loggedInUser = localStorage.getItem('loggedInUser') || "Anonymous";
+    var postContent = document.getElementById("postContent").value;
+
+    if (postContent) {
+        var postDiv = document.createElement('div');
+        postDiv.className = "post";
+
+        var image = document.getElementById('postImage').files[0];
+
+        if (image) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                postDiv.innerHTML = `<h3>${loggedInUser}</h3><p>${postContent}</p><img src="${e.target.result}" alt="Uploaded Image" width="100">`;
+                document.querySelector('.feed-section').appendChild(postDiv);
+            }
+
+            reader.readAsDataURL(image);
+        } else {
+            postDiv.innerHTML = `<h3>${loggedInUser}</h3><p>${postContent}</p>`;
+            document.querySelector('.feed-section').appendChild(postDiv);
+        }
+    }
+}
+
+        function searchPosts() {
+            var searchQuery = document.getElementById("searchBar").value.toLowerCase();
+            var allPosts = document.querySelectorAll('.post h3');
+
+            allPosts.forEach(function(postHeader) {
+                var postName = postHeader.innerText.toLowerCase();
+
+                if (postName.includes(searchQuery)) {
+                    postHeader.parentElement.style.display = "";
+                } else {
+                    postHeader.parentElement.style.display = "none";
+                }
+            });
+        }
+        document.getElementById("searchBar").addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {  // Check for "Enter" key
+        searchPosts(event);
+    }
+});
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

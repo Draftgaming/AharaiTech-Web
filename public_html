@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <title>achritecapp</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="s.pnj.jfif" type="image/png">
+</head>
+    <style>
+        body {
+            background-image: linear-gradient(185deg, #515151 42%, #00ba2b 100%);
+            font-family: "Open Sans", sans-serif;
+            color: #2ecf4b;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .box-form {
+            margin: 10% auto;
+            width: 60%;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 0 20px 6px #ffffff85;
+            overflow: hidden;
+        }
+
+        .left {
+            background-image: url("s.pnj.jfif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .left::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: 0;
+        }
+
+        .left h1 {
+            font-size: 2em;
+            z-index: 1;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .left p {
+            font-size: 1em;
+            z-index: 1;
+            position: relative;
+        }
+
+        .left a {
+            display: inline-block;
+            margin: 10px;
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            background: #eee;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .left a:hover {
+            background: #ddd;
+        }
+
+        .right {
+            padding: 30px;
+            direction: rtl;
+        }
+
+        .right h5 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .right p {
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        .right input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        .right input:focus {
+            border: 1px solid #00ba2b;
+            box-shadow: 0 0 5px rgba(0, 186, 43, 0.5);
+        }
+
+        .right .remember-me--forget-password {
+            align-items: center;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .right button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #00ba2b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .right button:hover {
+            background: #009a24;
+        }
+
+        @media (max-width: 768px) {
+            .box-form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-form">
+        <div class="left">
+            <h1>אחרייטק!</h1>
+            <p>האפליקציה הרשמית של חניכי אחרייטק!</p>
+            <a href="https://www.facebook.com/login/"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+            <a href="https://accounts.google.com/"><i class="fa fa-google" aria-hidden="true"></i> Google</a>
+        </div>
+    <div class="right">
+            <div class="terms">
+            <input type="checkbox" id="termsCheckbox" />
+            <label for="termsCheckbox">
+                <a href="תנאי-השימוש" target="_blank" style="color: inherit; text-decoration: none;">אני מאשר את תנאי השימוש</a>
+            </label>
+        </div>
+        <h5>הירשם (חניך)</h5>
+        <p>אם אין לך חשבון, יש למלא את הפרטים הבאים:</p>
+        <input type="text" placeholder="שם משתמש">
+        <input type="password" placeholder="סיסמה">
+        <input type="date" placeholder="תאריך לידה">
+        <input type="text" placeholder="מספר תעודת זהות">
+  
+<select name="עיר מגורים">
+    <option value="" selected>בחר עיר</option>
+    <option value="ירושלים">ירושלים</option>
+    <option value="תל אביב-יפו">תל אביב-יפו</option>
+    <option value="חיפה">חיפה</option>
+    <option value="ראשון לציון">ראשון לציון</option>
+    <option value="פתח תקווה">פתח תקווה</option>
+    <option value="אשדוד">אשדוד</option>
+    <option value="נתניה">נתניה</option>
+    <option value="באר שבע">באר שבע</option>
+    <option value="בני ברק">בני ברק</option>
+    <option value="חולון">חולון</option>
+    <option value="רמת גן">רמת גן</option>
+    <option value="אשקלון">אשקלון</option>
+    <option value="רחובות">רחובות</option>
+    <option value="בית שמש">בית שמש</option>
+    <option value="בת ים">בת ים</option>
+    <option value="כפר סבא">כפר סבא</option>
+    <option value="הרצליה">הרצליה</option>
+    <option value="חדרה">חדרה</option>
+    <option value="מודיעין- מכבים- רעות">מודיעין- מכבים- רעות</option>
+    <option value="לוד">לוד</option>
+    <option value="מודיעין עילית">מודיעין עילית</option>
+    <option value="נצרת">נצרת</option>
+    <option value="רמלה">רמלה</option>
+    <option value="רעננה">רעננה</option>
+    <option value="רהט">רהט</option>
+    <option value="ראש העין">ראש העין</option>
+    <option value="הוד השרון">הוד השרון</option>
+    <option value="ביתר עילית">ביתר עילית</option>
+    <option value="גבעתיים">גבעתיים</option>
+    <option value="קריית אתא">קריית אתא</option>
+    <option value="נהריה">נהריה</option>
+    <option value="קריית גת">קריית גת</option>
+    <option value="אום אל-פחם">אום אל-פחם</option>
+    <option value="עפולה">עפולה</option>
+    <option value="אילת">אילת</option>
+    <option value="נס ציונה">נס ציונה</option>
+    <option value="עכו">עכו</option>
+    <option value="יבנה">יבנה</option>
+    <option value="אלעד">אלעד</option>
+    <option value="רמת השרון">רמת השרון</option>
+    <option value="כרמיאל">כרמיאל</option>
+    <option value="טבריה">טבריה</option>
+    <option value="קריית מוצקין">קריית מוצקין</option>
+    <option value="טייבה">טייבה</option>
+    <option value="שפרעם">שפרעם</option>
+    <option value="נוף הגליל">נוף הגליל</option>
+    <option value="קריית ביאליק">קריית ביאליק</option>
+    <option value="קריית אונו">קריית אונו</option>
+    <option value="קריית ים">קריית ים</option>
+    <option value="נתיבות">נתיבות</option>
+    <option value="מעלה אדומים">מעלה אדומים</option>
+    <option value="אור יהודה">אור יהודה</option>
+    <option value="צפת">צפת</option>
+    <option value="דימונה">דימונה</option>
+    <option value="טמרה">טמרה</option>
+    <option value="אופקים">אופקים</option>
+    <option value="סח'נין">סח'נין</option>
+    <option value="באקה אל-גרבייה">באקה אל-גרבייה</option>
+    <option value="יהוד-מונוסון">יהוד-מונוסון</option>
+    <option value="שדרות">שדרות</option>
+    <option value="באר יעקב">באר יעקב</option>
+    <option value="גבעת שמואל">גבעת שמואל</option>
+    <option value="ערד">ערד</option>
+    <option value="טירה">טירה</option>
+    <option value="עראבה">עראבה</option>
+    <option value="כפר יונה">כפר יונה</option>
+    <option value="מגדל העמק">מגדל העמק</option>
+    <option value="קריית מלאכי">קריית מלאכי</option>
+    <option value="כפר קאסם">כפר קאסם</option>
+    <option value="טירת כרמל">טירת כרמל</option>
+    <option value="יקנעם עילית">יקנעם עילית</option>
+    <option value="נשר">נשר</option>
+    <option value="קלנסווה">קלנסווה</option>
+    <option value="קריית שמונה">קריית שמונה</option>
+    <option value="מעלות- תרשיחא">מעלות- תרשיחא</option>
+    <option value="אריאל">אריאל</option>
+    <option value="אור עקיבא">אור עקיבא</option>
+    <option value="בית שאן">בית שאן</option>
+</select>
+
+        </select>
+        
+        <a href="דף-הבית">
+            <button>הירשם</button>
+        </a>
+        <a href="index.html">
+            <button>יש לי כבר חשבון</button>
+        </a>
+    </div>
+
+    </div>
+    <script src="sigin.js"></script>
+    <script>
+    <script src="sigin.js"></script>
+    <!-- Your previous body tag content here -->
+    <script>
+  
+      document.querySelector(".inputs button").addEventListener("click", function() {
+        var username = document.querySelector("input[placeholder='שם משתמש']").value;
+        var password = document.querySelector("input[placeholder='סיסמה']").value;
+
+        var user = JSON.parse(localStorage.getItem('user'));
+
+        if(user && user.username === username && user.password === password) {
+          alert('User logged in successfully!');
+        } else {
+          alert('Invalid username or password');
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<!-- partial -->
