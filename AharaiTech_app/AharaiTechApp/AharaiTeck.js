@@ -33,3 +33,21 @@ else {
     console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 }
 // ]]>
+
+function validateForm() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    if (username === "" || password === "") {
+        alert("Please fill in both the username and password fields.");
+        return false; // Prevent form submission
+    }
+    
+    return true; // Allow form submission
+}
+
+function submitForm() {
+    if (validateForm()) {
+        window.location.href = "../../Home-updated/Home.html"; // Navigate to the desired page
+    }
+}

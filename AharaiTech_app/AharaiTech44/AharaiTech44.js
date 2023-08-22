@@ -13,6 +13,7 @@ if ('WebSocket' in window) {
                     var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
                     elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
                 }
+                <a href="../A"></a>
                 parent.appendChild(elem);
             }
         }
