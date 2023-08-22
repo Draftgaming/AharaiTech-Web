@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN PANEL</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="s.pnj.jfif" type="image/png">
+    <link rel="stylesheet" href="Admin-Home.js" class="js">
+    <link rel="stylesheet" href="Admin-Home.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>TECHGRAM - ADMIN PANEL-ADMIN USER 3 (Full access, responsible for the site (administrators responsible for developing the site))</h1>
+        <div>
+            <a href="info.html">מידע על התוכנית</a>
+            <i id="profile-icon" class="fa fa-user-circle" aria-hidden="true" style="font-size: 30px;"></i>
+            <!-- Admin Panel Toggle Button -->
+            <button onclick="showAdminPanel()">Admin Tools</button>
+        </div>
+    </div>
+        <div class="admin-panel" style="display:none;">
+        <h2>Admin Tools</h2>
+
+        <!-- User Management -->
+        <div class="user-management">
+            <h3>User Management</h3>
+            <ul id="userList">
+                <li>4 <button onclick="deleteUser('4')">Delete</button></li>
+                <li>3(admin) <button onclick="deleteUser('3(admin)')">Delete</button></li>
+            </ul>
+        </div>
+
+        <!-- Reported Posts Handling -->
+        <div class="reported-posts">
+            <h3>Reported Posts</h3>
+            <ul id="reportedPostsList">
+             <li>Report about a post by מיטב 
+    <button onclick="reviewReport('מה יש לכם זה וירוס')">Review</button>
+    <button onclick="deleteReport('מה יש לכם זה וירוס')">Delete</button>
+</li>
+
+            </ul>
+        </div>
+
+        <!-- Announcements and Notices -->
+        <div class="announcements">
+            <h3>Announcements</h3>
+            <textarea id="announcementContent" placeholder="Write your announcement..."></textarea>
+            <button onclick="postAnnouncement()">Post</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="default-pic.jpg" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="feed-section">
+            <input type="text" id="searchBar" placeholder="חפש משתמש...">
+            <textarea id="postContent" rows="4" cols="50" placeholder="Enter your post content here..."></textarea>
+            <input type="file" id="postImage" accept="image/*">
+            <button onclick="uploadPost()">העלה פוסט</button>
+            
+            <!-- Example Post with Delete Option -->
+            <div class="post">
+                <div class="post-header">
+                    <h3>גיא מזרחי</h3>
+                </div>
+                <p><small>Posted on: <span class="post-date">15/08/2023</span></small></p>
+                <p>נראה לי שהעיצב הירוק אפור הזה יותר יפה.. כןכן הוא מדהים</p>
+                <button onclick="deletePost(this)" class="delete-btn">admin Delete</button>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <h3>שי</h3>
+                  
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <img src="s.pnj.jfif" alt="Description of Image">
+                <p>היי לכם! העלתי תמונה! העיצוב הזה מדהים</p>
+                <p>אני שוקל להוסיף תגובות לפוסט...</p>
+                <button onclick="deletePost(this)" class="delete-btn">admin Delete</button>
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <h3>ADMIN</h3>
+
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <p>הבנתי עכשיו העיצוב יותר יפה וגם העלת פוסט מעלה לשרת.. נסגור אותו כדי לחסוך באחסון השרת...</p>
+                <button onclick="deletePost(this)" class="delete-btn">admin Delete</button>            </div>
+            <div class="post">
+                <div class="post-header">
+                    <h3>מיטב</h3>
+
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <p>מה יש לכם זה וירוס</p>
+                <button onclick="deletePost(this)" class="delete-btn">admin Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="account-panel">
+        <h2>Welcome, <span id="usernameDisplay"></span></h2>
+        <p><strong>Username:</strong> <input id="editUsername" value=""></p>
+        <p><strong>Password:</strong> <input type="password" id="editPassword" value=""></p>
+        <p><strong>Birthdate:</strong> <input type="date" id="editBirthdate" value=""></p>
+        <p><strong>ID:</strong> <input id="editId" value=""></p>
+        <p><strong>City:</strong> <input id="editCity" value=""></p>
+        <button onclick="saveDetails()">Save Changes</button>
+        <button onclick="editDetails()">Edit Details</button>
+    </div>
+
+ 
+</body>
+
+</html>

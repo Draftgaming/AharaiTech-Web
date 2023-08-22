@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN PANEL</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="s.pnj.jfif" type="image/png">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Home.js" class="js">
+</head>
+
+<body>
+    <div class="header">
+        <h1>TECHGRAM </h1>
+        <div>
+            <a href="info.html">מידע על התוכנית</a>
+            <i id="profile-icon" class="fa fa-user-circle" aria-hidden="true" style="font-size: 30px;"></i>
+            <!-- Admin Panel Toggle Button -->
+        </div>
+    </div>
+
+
+            </ul>
+        </div>
+
+    <div class="main-content">
+        <div class="profile-section">
+            <div class="profile-pic">
+                <img src="default-pic.jpg" alt="Profile Picture">
+            </div>
+        </div>
+        <div class="feed-section">
+            <input type="text" id="searchBar" placeholder="חפש משתמש...">
+            <textarea id="postContent" rows="4" cols="50" placeholder="Enter your post content here..."></textarea>
+            <input type="file" id="postImage" accept="image/*">
+            <button onclick="uploadPost()">העלה פוסט</button>
+            
+            <!-- Example Post with Delete Option -->
+            <div class="post">
+                <div class="post-header">
+                    <h3>גיא מזרחי</h3>
+                </div>
+                <p><small>Posted on: <span class="post-date">15/08/2023</span></small></p>
+                <p>נראה לי שהעיצב הירוק אפור הזה יותר יפה.. כןכן הוא מדהים</p>
+
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <h3>שי</h3>
+                  
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <img src="s.pnj.jfif" alt="Description of Image">
+                <p>היי לכם! העלתי תמונה! העיצוב הזה מדהים</p>
+                <p>אני שוקל להוסיף תגובות לפוסט...</p>
+
+            </div>
+            <div class="post">
+                <div class="post-header">
+                    <h3>ADMIN</h3>
+
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <p>הבנתי עכשיו העיצוב יותר יפה וגם העלת פוסט מעלה לשרת.. נסגור אותו כדי לחסוך באחסון השרת...</p>
+
+            <div class="post">
+                <div class="post-header">
+                    <h3>מיטב</h3>
+
+                </div>
+                <p><small>Posted on: <span class="post-date">16/08/2023</span></small></p>
+                <p>מה יש לכם זה וירוס</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="account-panel">
+        <h2>Welcome, <span id="usernameDisplay"></span></h2>
+        <p><strong>Username:</strong> <input id="editUsername" value=""></p>
+        <p><strong>Password:</strong> <input type="password" id="editPassword" value=""></p>
+        <p><strong>Birthdate:</strong> <input type="date" id="editBirthdate" value=""></p>
+        <p><strong>ID:</strong> <input id="editId" value=""></p>
+        <p><strong>City:</strong> <input id="editCity" value=""></p>
+        <button onclick="saveDetails()">Save Changes</button>
+        <button onclick="editDetails()">Edit Details</button>
+    </div>
+
+</body>
+
+</html>
